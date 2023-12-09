@@ -601,6 +601,72 @@
                             </div>
                         </div>
 
+                        <!-- Images Design -->
+                        <div class="desingsContainer" id="imagesDesing">
+                            <div class="desingExplain">
+                                test
+                            </div>
+                            <div class="webview test test2">
+                                <p class="english"></p>
+                                <p class="arabic">
+                                    انقر على الصورة لرؤية التصميم بشكل كامل <i class="fa-regular fa-hand-point-down"
+                                    style="margin: 0 8px;"></i>
+                                </p>
+                                <div class="rightArrow" onclick="rightArrowImages()">
+                                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                                </div>
+                                <div class="leftArrow" onclick="leftArrowImages()">
+                                    <ion-icon name="chevron-back-outline"></ion-icon>
+                                </div>
+                                <div class="swiperContainer">
+                                    <div class="swiper mySwiper" dir="rtl" style="margin-top: 16px;" id="webDesignExm">
+                                        <!-- Additional required wrapper -->
+                                        <div class="swiper-wrapper">
+                                            <!-- Slides -->
+                                            <div class="swiper-slide"><img src="./LFGassets/imgs/websiteDesignExm/imgSytle/1.jpg" alt="" class="img"></div>
+                                            <div class="swiper-slide"><img src="./LFGassets/imgs/websiteDesignExm/imgSytle/2.jpg" alt="" class="img"></div>
+                                            <div class="swiper-slide"><img src="./LFGassets/imgs/websiteDesignExm/imgSytle/5.jpg" alt="" class="img"></div>
+                                            <div class="swiper-slide"><img src="./LFGassets/imgs/websiteDesignExm/imgSytle/6.jpg" alt="" class="img"></div>
+                                            <div class="swiper-slide"><img src="./LFGassets/imgs/websiteDesignExm/imgSytle/7.png" alt="" class="img"></div>
+                                        </div>
+                                        <div class="swiper-button-next"></div>
+                                        <div class="swiper-button-prev"></div>
+                                        <div class="swiper-pagination"></div>
+                                        <div class="scrollingOrderBG"></div>
+                                    </div>
+
+                                    <!-- Scolling Order -->
+                                    <div class="scrollingOrder">
+                                        <p class="english">scroll down</p>
+                                        <p class="arabic">تصفح التصميم</p>
+                                        <div class="shape">
+                                            <div class="scrallBtn"></div>
+                                            <img src="./assets/imgs/heroOrder.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="./LFGassets/imgs/lapFrame.png" alt="" id="lapFrame">
+                                <script>
+                                    let swiperImgs = document.querySelectorAll('#imagesDesing .swiper-wrapper img')
+                                    let swiperImgsHight = []
+                                    swiperImgs.forEach(img => {
+                                        swiperImgsHight.push(Number(img.clientHeight))
+                                    });
+                                    document.querySelector('#imagesDesing .scrollingOrderBG').style['height'] = `${Math.max(...swiperImgsHight)}px`
+                                </script>
+                                <script>
+                                    function rightArrowImages() {
+                                        let clickEvent = new Event('click')
+                                        document.querySelector('.imagesDesing .webview .swiper-button-prev').dispatchEvent(clickEvent)
+                                    }
+                                    function leftArrowImages() {
+                                        let clickEvent = new Event('click')
+                                        document.querySelector('.imagesDesing .webview .swiper-button-next').dispatchEvent(clickEvent)
+                                    }
+                                </script>
+                            </div>
+                        </div>
+
                         <!-- Greadint Design -->
                         <div class="desingsContainer" id="greadintDesing">
                             <div class="desingExplain">
