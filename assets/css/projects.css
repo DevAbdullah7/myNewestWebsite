@@ -1,0 +1,371 @@
+.html.projects .body {
+    min-height: 100vh;
+}
+
+.html.projects .body.flex-center {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.html.projects main.mainContent.flex-center {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+.html.projects .mainContent {
+    text-align: unset;
+    min-height: unset;
+}
+
+.project,
+.pref {
+    position: relative;
+    width: 100%;
+}
+
+.html.projects .section {
+    margin: unset;
+}
+
+.html.projects .sectionInfo {
+    margin-bottom: 75px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .html.projects .sectionInfo {
+        margin-bottom: 25px;
+    }
+}
+
+.html.projects .content .resumeContent {
+    margin-bottom: 25px;
+}
+
+.html.projects .content .resumeContent .personalInfo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.html.projects .content .resumeContent .personalInfo .icon {
+    font-size: var(--normal-size);
+    color: var(--firstTyColorLight);
+}
+
+.html.dark.projects .content .resumeContent .personalInfo .icon {
+    font-size: var(--normal-size);
+    color: var(--firstTyColorLight);
+}
+
+.html.projects .content .resumeContent.projectOwner .social.flex-center {}
+
+.html.projects .content .resumeContent .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 5%;
+}
+
+@media only screen and (max-width: 768px) {
+    .html.projects .content .resumeContent .flex {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        gap: 0%;
+    }
+}
+
+.html.projects .content .resumeContent .flex .subContent {
+    margin: 15px 0 0;
+}
+
+.html.projects .content .title {
+    margin-bottom: 10px;
+}
+
+.html.projects .content .resumeContent .shape {
+    padding: 10px;
+    border-radius: 10px;
+    line-height: 55px;
+}
+
+.html.light.projects .content .resumeContent .shape {
+    -webkit-box-shadow: var(--neumBtn-Small-Light);
+    box-shadow: var(--neumBtn-Small-Light);
+    background: var(--footerAndIconsColorLight);
+}
+
+.html.dark.projects .content .resumeContent .shape {
+    -webkit-box-shadow: var(--neumBtn-Small-Dark);
+    box-shadow: var(--neumBtn-Small-Dark);
+    background: var(--footerAndIconsColorDark);
+}
+
+.html.projects .resumeContent .social {
+    width: 100%;
+    margin: 15px 0;
+    gap: 15px;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+.html.light.projects .resumeContent .social a {}
+
+.html.dark.projects .resumeContent .social a {}
+
+.html.projects .sectionContent .column {
+    position: relative;
+    width: 40%;
+}
+
+
+.html.projects .sectionContent .column .img {
+    position: relative;
+    width: 325px;
+    height: 325px;
+    margin: 25px auto;
+}
+
+@media only screen and (max-width: 500px) {
+    .html.projects .sectionContent .column .img {
+        width: 325px;
+        height: 325px;
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    .html.projects .sectionContent .column .img {
+        width: 425px;
+        height: 425px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .html.projects .sectionContent .column .img {
+        width: 525px;
+        height: 525px;
+    }
+}
+
+.html.projects .sectionContent .column .img img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    border-radius: 15px;
+    -webkit-transition: .5s all ease-in-out;
+    -o-transition: .5s all ease-in-out;
+    transition: .5s all ease-in-out;
+}
+
+.html.projects .sectionContent .column .img img.shape {
+    z-index: -1 !important;
+    opacity: .25 !important;
+    scale: 1.1;
+}
+
+.html.light.projects .sectionContent .column .img img.light {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+    z-index: 1;
+}
+
+.html.light.projects .sectionContent .column .img img.dark {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    opacity: 0;
+    z-index: 0;
+}
+
+.html.dark.projects .sectionContent .column .img img.light {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    opacity: 0;
+    z-index: 0;
+}
+
+.html.dark.projects .sectionContent .column .img img.dark {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+    z-index: 1;
+}
+
+
+/* Pref Stylling */
+
+.pref {
+    opacity: 1 !important;
+    -webkit-transform: translateY(0) !important;
+        -ms-transform: translateY(0) !important;
+            transform: translateY(0) !important;
+}
+
+.html.english .sectionInfo .backBtn.english {
+    left: 0;
+}
+
+.pref .orderTips {
+    position: relative;
+    width: 100%;
+    margin: 24px 0 64px;
+    gap: 24px;
+    text-align: center;
+}
+
+.pref .orderTips .title {
+    text-transform: capitalize;
+}
+
+.pref .orderTips .title.english {
+    line-height: 32px;
+}
+
+.pref .orderTips .social {
+    gap: 24px;
+}
+
+.pref .sectionContent {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+}
+
+.pref .sectionContent .row {
+    position: relative;
+    width: 50%;
+    margin: 0 0 24px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 8px;
+}
+
+.pref .sectionContent .row .perfQuation {
+    position: relative;
+    width: 90%;
+}
+
+.pref .sectionContent .row .perfQuation input, 
+.pref .sectionContent .row .perfQuation select, 
+.pref .sectionContent .row .perfQuation textarea {
+    width: 100%;
+    min-height: 35px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: start;
+    resize: none;
+    font-family: var(--arabic-font);
+    color: var(--seccondTyColorLight);
+    -webkit-box-shadow: var(--neumBtn-Small-Light);
+            box-shadow: var(--neumBtn-Small-Light);
+    background-color: var(--firstTyColorDark);
+    border: 1px solid var(--seccondColorLight);
+    -webkit-transition: .5s all ease-in-out;
+    -o-transition: .5s all ease-in-out;
+    transition: .5s all ease-in-out
+}
+
+.html.dark.projects .pref .sectionContent .row .perfQuation input, 
+.html.dark.projects .pref .sectionContent .row .perfQuation select, 
+.html.dark.projects .pref .sectionContent .row .perfQuation textarea {
+    color: var(--seccondTyColorDark);
+    -webkit-box-shadow: var(--neumBtn-Small-Dark);
+            box-shadow: var(--neumBtn-Small-Dark);
+    background-color: var(--footerAndIconsColorDark);
+}
+
+.pref .sectionContent .row .perfQuation select option {
+    font-family: var(--arabic-font);
+}
+
+.pref .sectionContent .row .prefTitle {
+    width: 90%;
+    line-height: var(--line-height-big);
+    font-size: var(--normal-size);
+    color: var(--firstTyColorLight);
+    -webkit-transition: .5s all ease-in-out;
+    -o-transition: .5s all ease-in-out;
+    transition: .5s all ease-in-out
+}
+.html.dark.projects .pref .sectionContent .row .prefTitle {
+    color: var(--seccondTyColorDark);
+}
+
+.pref .sectionContent .btn {
+    width: 225px;
+    height: 50px;
+    margin: 50px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: var(--bigger-size);
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--firstTyColorDark);
+    -webkit-box-shadow: var(--neumBtn-Medium-Light);
+            box-shadow: var(--neumBtn-Medium-Light);
+    background: var(--seccondColorLight);
+    -webkit-transition: .5s all ease-in-out;
+    -o-transition: .5s all ease-in-out;
+    transition: .5s all ease-in-out;
+}
+
+.html.dark.projects .pref .sectionContent .btn {
+    color: var(--firstTyColorDark);
+    -webkit-box-shadow: var(--neumBtn-Medium-Dark);
+            box-shadow: var(--neumBtn-Medium-Dark);
+    background: var(--footerAndIconsColorDark);
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .pref .sectionContent .row {
+        width: 100%;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+
+    .pref .sectionContent .row .prefTitle,
+    .pref .sectionContent .row .perfQuation {
+        width: 100%;
+    }
+}

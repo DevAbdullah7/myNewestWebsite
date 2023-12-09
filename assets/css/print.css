@@ -1,0 +1,40 @@
+@media print {
+    .nav {
+        display: none;
+    }
+    .mainContent {
+        width: 95%;
+    }
+
+    .pref .sectionContent .row {
+        width: 100%;
+        margin: 25px 0 10px;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+    
+    .pref .sectionContent .row .prefTitle,
+    .pref .sectionContent .row .perfQuation {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    
+    .html.dark.projects .pref .sectionContent .row .perfQuation input, 
+    .html.dark.projects .pref .sectionContent .row .perfQuation select, 
+    .html.dark.projects .pref .sectionContent .row .perfQuation textarea {
+        -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .25);
+                box-shadow: 0 0 10px rgba(0, 0, 0, .25);
+    }
+
+    .html.projects .sectionInfo,
+    .pref .sectionContent .btn,
+    .footer {
+        display: none;
+    }
+}

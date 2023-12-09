@@ -1,0 +1,193 @@
+.heroImg {
+    width: 50%;
+}
+@media only screen and (max-width: 1024px) {
+    .heroImg {
+        width: 100%;
+    }
+
+    .swiper {
+        width: 100% !important;
+        height: fit-content !important;
+    }
+}
+
+.swiperContainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 20% 12.2% 31% 11.3%;
+    overflow: hidden;
+    z-index: 10000;
+}
+.swiper {
+    width: 625px;
+    height: 475px;
+    border-radius: 10px;
+    border: 5px solid var(--shiftColor);
+}
+.swiper#webDesignExm {
+    width: 100.75%;
+    transform: translateX(10px);
+    height: 100%;
+    overflow-y: scroll !important;
+    z-index: 10001;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.swiper#webDesignExm::-webkit-scrollbar {
+    display: none;
+}
+
+.swiper img {
+    width: 100%;
+    height: 100%;
+}
+.swiper#webDesignExm img {
+    height: unset;
+}
+
+.swiper#webDesignExm .swiper-button-next, 
+.swiper#webDesignExm .swiper-rtl .swiper-button-prev {
+    opacity: 0 !important;
+}
+.swiper#webDesignExm .swiper-horizontal>.swiper-pagination-bullets, 
+.swiper#webDesignExm .swiper-pagination-bullets.swiper-pagination-horizontal, 
+.swiper#webDesignExm .swiper-pagination-custom, 
+.swiper#webDesignExm .swiper-pagination-fraction {
+    opacity: 0;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: var(--mainColorDark) !important;
+    width: calc(var(--swiper-navigation-size)/ 44 * 5) !important;
+    opacity: 0 !important;
+}
+.swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 30px !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--mainColorDark) !important;
+}
+
+.shadImg,
+.swiper {
+    box-shadow: 0 10px 45px rgba(0, 0, 0, .15);
+}
+
+/* Web View */
+.webview {
+    position: relative;
+    width: 50%;
+}
+
+.webview #lapFrame {
+    position: relative;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.webview p {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 10%;
+    left: 0;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.webview .rightArrow,
+.webview .leftArrow{
+    position: absolute;
+    width: 128px;
+    height: 128px;
+    top: 38%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    cursor: pointer;
+}
+
+.webview .rightArrow {
+    right: -85px;
+}
+.webview .leftArrow {
+    left: -85px;
+}
+
+.desingsContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Swiper scrolling order Dynamic */
+.webview .scrollingOrderBG {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .5);
+    z-index: 1;
+    transition: .75s all ease-in-out;
+}
+.webview .swiperContainer:hover .scrollingOrderBG {
+    opacity: 0;
+    z-index: -1;
+}
+
+.webview .scrollingOrder {
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: eee;
+    font-size: 32px;
+    z-index: 1000000;
+    transition: .65s all ease-in-out .1s;
+}
+.webview .swiperContainer:hover .scrollingOrder {
+    transform: translateX(-50%) translateY(-225px) scale(0);
+    transform-origin: top;
+}
+
+.webview .scrollingOrder .shape {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-32px);
+}
+
+.webview .scrollingOrder .shape img {
+    position: absolute;
+    width: 32px;
+    bottom: -19px;
+}
+
+.webview .scrollingOrder .scrallBtn {
+    position: absolute;
+    width: 2px;
+    height: 6px;
+    bottom: 47px;
+    border-radius: 1px;
+    background: #ffffff;
+    animation-name: scrolling;
+    animation-duration: 1.25s;
+    animation-iteration-count: infinite;
+}
+
+/* Scall Shape Animation */
+@keyframes scrolling {
+    0%   {top: -5px;}
+    50%  {top: 0px;}
+    100% {top: 5px;}
+}
